@@ -165,7 +165,7 @@ var showImages = function(dataset) {
 }
 
 function configure() {
-  const popupUrl = `${window.location.origin}/configure.html`;
+  const popupUrl = `${window.location.href}/../configure.html`; // temp patch for github pages structure
   tableau.extensions.ui.displayDialogAsync(popupUrl, 'Payload Message', { height: 550, width: 500 }).then((closePayload) => {
     setConfig(function(seenConfig, validConfig) {
       if (validConfig) {
